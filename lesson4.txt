@@ -1,0 +1,11 @@
+   0 vi /tmp/file.txt
+   1 df -h | head -3 >> /tmp/file.txt
+   2 chmod g+w,u-r,o+x /tmp/file.txt 
+   3 ls -l /tmp/
+   4 export NAME=germans
+   5 export VAR=riga
+   6 echo $NAME >> /tmp/file.txt
+   7 echo $VAR >> /tmp/file.txt
+   8 nano
+   9 nano /tmp/file.txt
+  10 history > /tmp/history.txt
