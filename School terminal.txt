@@ -1,0 +1,72 @@
+[ec2-user@ip-172-31-33-20 ~]$ mkdir /tmp/mybox
+[ec2-user@ip-172-31-33-20 ~]$ cd /tmp/mybox
+[ec2-user@ip-172-31-33-20 mybox]$ nano german.sh
+[ec2-user@ip-172-31-33-20 mybox]$ mv /tmp/mybox /tmp/german
+[ec2-user@ip-172-31-33-20 mybox]$ cd ..
+[ec2-user@ip-172-31-33-20 tmp]$ cd /tmp/german
+[ec2-user@ip-172-31-33-20 german]$ nano taskgerman.sh
+[ec2-user@ip-172-31-33-20 german]$ chmod 744 taskgerman.sh
+[ec2-user@ip-172-31-33-20 german]$ ./taskgerman
+-bash: ./taskgerman: No such file or directory
+[ec2-user@ip-172-31-33-20 german]$ ./taskgerman.sh
+1
+18:12:43
+2
+18:12:43
+3
+18:12:43
+4
+18:12:43
+5
+18:12:43
+6
+18:12:43
+7
+18:12:43
+8
+18:12:43
+9
+18:12:43
+10
+18:12:43
+[ec2-user@ip-172-31-33-20 german]$ crontab -e
+crontab: no changes made to crontab
+You have new mail in /var/spool/mail/ec2-user
+[ec2-user@ip-172-31-33-20 german]$ touch taskgerman.sh
+[ec2-user@ip-172-31-33-20 german]$ ls
+10_18:12:43  1_18:12:43  2_18:12:43  3_18:12:43  4_18:12:43  5_18:12:43  6_18:12:43  7_18:12:43  8_18:12:43  9_18:12:43  german.sh  taskgerman.sh
+[ec2-user@ip-172-31-33-20 german]$ echo -e '#!/bin/bash\n date\n "DONE"' >> taskgerman.sh
+[ec2-user@ip-172-31-33-20 german]$ cd german/
+-bash: cd: german/: No such file or directory
+[ec2-user@ip-172-31-33-20 german]$ ls -l
+total 8
+-rw-rw-r-- 1 ec2-user ec2-user   0 Nov  8 18:12 10_18:12:43
+-rw-rw-r-- 1 ec2-user ec2-user   0 Nov  8 18:12 1_18:12:43
+-rw-rw-r-- 1 ec2-user ec2-user   0 Nov  8 18:12 2_18:12:43
+-rw-rw-r-- 1 ec2-user ec2-user   0 Nov  8 18:12 3_18:12:43
+-rw-rw-r-- 1 ec2-user ec2-user   0 Nov  8 18:12 4_18:12:43
+-rw-rw-r-- 1 ec2-user ec2-user   0 Nov  8 18:12 5_18:12:43
+-rw-rw-r-- 1 ec2-user ec2-user   0 Nov  8 18:12 6_18:12:43
+-rw-rw-r-- 1 ec2-user ec2-user   0 Nov  8 18:12 7_18:12:43
+-rw-rw-r-- 1 ec2-user ec2-user   0 Nov  8 18:12 8_18:12:43
+-rw-rw-r-- 1 ec2-user ec2-user   0 Nov  8 18:12 9_18:12:43
+-rw-rw-r-- 1 ec2-user ec2-user  13 Nov  8 17:51 german.sh
+-rwxr--r-- 1 ec2-user ec2-user 131 Nov  8 18:24 taskgerman.sh
+[ec2-user@ip-172-31-33-20 german]$ crontab -e
+crontab: no changes made to crontab
+[ec2-user@ip-172-31-33-20 german]$ crontab -e
+crontab: installing new crontab
+[ec2-user@ip-172-31-33-20 german]$ touch german.txt
+[ec2-user@ip-172-31-33-20 german]$ crontab -e
+crontab: installing new crontab
+You have mail in /var/spool/mail/ec2-user
+[ec2-user@ip-172-31-33-20 german]$ cat /opt/43_44_evening_b/german/german.txt
+cat: /opt/43_44_evening_b/german/german.txt: No such file or directory
+[ec2-user@ip-172-31-33-20 german]$ ls
+10_18:12:43  1_18:12:43  2_18:12:43  3_18:12:43  4_18:12:43  5_18:12:43  6_18:12:43  7_18:12:43  8_18:12:43  9_18:12:43  german.sh  german.txt  taskgerman.sh
+[ec2-user@ip-172-31-33-20 german]$ cd german.txt
+-bash: cd: german.txt: Not a directory
+[ec2-user@ip-172-31-33-20 german]$ 
+
+
+Я там запутал все в конце, в  создании планировщика! Не понимаю как правильно сделать и закончить, и что делать если я уже сбился ?
